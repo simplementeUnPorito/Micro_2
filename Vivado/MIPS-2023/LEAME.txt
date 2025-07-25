@@ -1,0 +1,133 @@
+COMO USAR LA DESCRIPCIÓN
+------------------------
+1. Cree un nuevo proyecto
+2. Seleccionar la tarjeta ZYBO
+3. Incluya en el proyecto todos los archivos .vhd como (Add Sources) fuentes de diseño (design sources). 
+4. Incluir el archivo ZYBO_Master.xdc como (Add Sources) constraints.
+5. Incluir el archivo mips_tb.vhd como (Add Sources) simulation sources. En este archivo pueden realizar las modificaciones necesarias para la simulación del comportamiento del sistema.
+6. El archivo programa.txt debe estar en la misma carpeta donde están los fuentes .vhd. Este archivo contiene el programa que se carga en el momento de la síntesis a la ROM del MIPS.
+
+En el archivo general.vhd se encuentran las constantes: NUM_BITS_MEMORIA_INSTRUCCIONES  y NUM_BITS_MEMORIA_DATOS, que definen la cantidad de bits de las direcciones que se usan para la memoria de instrucciones y de datos respectivamente. Cada posición corresponde a una palabra de 32 bits. Por lo tanto, si NUM_BITS_MEMORIA_INSTRUCCIONES equivale a 7, entonces hay 128 posiciones de 32 bits cada una para la memoria de instrucciones.
+
+El programa a ser ejecutado debe estar contenido en un archivo de texto (programa.txt) que debe contener una instrucción por cada línea en números hexadecimales. El nombre asignado está definido en el archivo general.vhd y puede ser cambiado allí. El archivo debe estar en el mismo directorio, junto con los demás archivos VHDL del proyecto. Si se realiza un cambio en el programa es necesario volver a sintetizar el MIPS.
+
+El programa de ejemplo en el proyecto prende los LEDs de la placa implementado un contador binario natural módulo 16. Se incrementa cada ~1 segundo.
+
+El programa en lenguaje ensamblador se encuentra en el archivo: prueba_salida_digital.s.
+
+Para hacer reset al micro se utilizan el pin 1 del PMOD denominado JE. El reset es activo alto.
+
+INSTRUCCIONES IMPLEMENTADAS
+---------------------------
+Aritméticas:
+	add, addu, addi, addiu, sub, subu, sra y srav.
+Lógicas:
+	and, andi, or, ori, xor, xori y nor.
+Corrimiento:
+	sll, sllv, srl y srlv.
+Salto:
+	beq, bne, j, jal y jr.
+Carga y almacenamiento en memoria:
+	lw, lb, lbu, lh, lhu, sw, sb y sh.
+Comparación:
+	slt, slti, sltu y sltiu.
+Carga constante:
+	lui.
+ 
+PERIFÉRICOS IMPLEMENTADOS
+-------------------------
+1. Salida paralela que se conecta a los 8 LEDs de la placa. Dirección: 0xFFFF8000. El bit menos significativo corresponde al LED etiquetado LD0 (M14) de la placa.
+2. Entrada paralela, las 4 llaves de la placa (los más significativos) y 4 pulsadores (los menos significativos) son los 8 bits menos significativos de la posición de memoria. Dirección: 0xFFFFD000.
+
+FRECUENCIA DE RELOJ DE OPERACIÓN DEL MIPS
+-----------------------------------------
+60 MHz (120MHz / 2)
+
+HISTORIAL DE VERSIONES
+----------------------
+Versión 1.5 (5/6/2024)
+Implementación adaptada a la tarjeta ZYBO de Digilent.
+Se quitó el controlador del LCD de la antigua placa y se dejó solamente la entrada digital (8 bits) y la salida que corresponde a los 4 leds en la placa.
+
+Versión 1.4 (16/6/2019)
+Agrega, como entrada las llaves de dos posiciones (4) y los dos pulsadores que quedan (north y south). East y WEST se usan para el reset.
+Los pulsadores son los dos bits menos significativos y las llaves los más significativos. El bit 0 corresponde al north y el bit 1 a south. Los bits 2 a 5 corresponden a las llaves SW0 a SW3 respectivamente.
+Dirección: 0xFFFFD000.
+El programa puesto en el archivo programa.txt mueve el texto "*MICRO 2*" por el LCD, hacia la izquierda o la derecha. Cuando alcanza el borde solo puede avanzar en sentido contrario.
+
+--------------------------------------------
+Versión 1.3.2 (5/7/2019)
+Corrige un error en el uso de las declaraciones hechas en general.vhd.
+
+En el archivo general.vhd se define una constante con el nombre del archivo donde se encuentra el programa que será usado para inicializar la ROM (memoria de instrucciones) del MIPS, pero en el descripción de la memoria (mi.vhd) se ponía de nuevo el valor "programa.txt" cuando que se debería usar la constante definida en general.vhd.
+
+--------------------------------------------
+Versión 1.3.1 (12/6/2019)
+Corrige un error en las direcciones de la memoria de datos.
+
+El problema es que los bits de direcciones del módulo de memoria de datos estaba mal conectado, se usaban los bits menos significativos cuando que se tendrían que dejar sin usar los dos bits menos significativos. Esto porque cada posición de memoria es de 32 bits y las direcciones del MIPS son a byte. En el software lo que ocurre es que todas las direcciones utilizadas no coinciden con posiciones físicas de memoria.
+
+En síntesis afecta a las instrucciones lw y sw.
+
+Para los que ya han modificado la versión para adecuarla a su TP, solamente hay que modificar una línea de la conexión de la instanciación del módulo de memoria de datos md.
+
+    Inst_md: md PORT MAP(
+		dir => dir(NUM_BITS_MEMORIA_DATOS -1+2 downto 2), --<<<----------------- LÍNEA MODIFICADA
+		datain => datain,
+		cs => csMem,
+		memwrite => memwrite,
+		memread => memread,
+		clk => clk,
+		dataout => dataout
+    );
+
+--------------------------------------------
+Versión 1.3 
+Esta versión ordena mejor la memoria y los dispositivos de entrada salida, colocándolos en un sub componente.
+
+Se ha corregido la decodificación de memoria para adherise al estandar del MIPS, que establece que los periféricos están mapeados en memoria en el rango de direcciones 0xFFFF0000 hasta 0xFFFFFFFF. Para la decodificación se utilizan los 32 bits de las direcciones (salida de la ALU). Las nuevas direcciones quedan de la siguiente forma:
+1 palabra de 32 bits para los LEDs, de los cuales se utilizan solo los 8 bits menos significativos: 0xFFFF8000
+1 palabra de 32 bits para el LCD, de los cuales se utilizan solo los 9 bits menos significativos: 0xFFFFC000
+Esto para que el programa desarrollado pueda ser probado previamente en el MARS.
+
+Se agrega además las instrucciones SLL y SLR a las otras ya ejecutadas.
+
+Esta implementación es capaz de ejecutar las siguientes instrucciones:
+add, addi, sub, and, or, ori, andi, slti, slt, lui, beq, bne, j, jal, jr, sll, slr, lw y sw.
+
+El programa de ejemplo que se ejecuta en esta versión muestra en el LCD "*MICRO 2*" y en los LEDs se prende uno por vez y se hace un corrimiento hacia la izquierda hasta que llega el último bit y luego empieza de nuevo en el primero.
+----------------------------------
+Versión 1.2 - 13/6/2016
+Esta versión corrige un error en el uso de las constantes declaradas en general.vhd, que definen el tamaño de la ROM de instrucciones y de la RAM de datos, en ambos casos estas constantes no eran utilizadas en mips.vhd, por lo que al cambiar el tamaño se generaba un error en el momento de la síntesis.
+
+Además esta versión dispone de dos dispositivos de salida, uno es el puerto paralelo que se conecta los LEDs de la placa y el otro es el puerto que controla el LCD de la placa.
+La dirección de acceso a los LEDs de la placa es: 0x80000000. Es un puerto de salida, los 8 bits menos significativos de lo que se escribe en esa dirección se muestra en los LEDs.
+La dirección de acceso al LCD es: 0xc0000000. Es un puerto de salida, lo que se escribe allí es enviado al LCD. Este dispositivo implementa la temporización de escritura del LCD, es decir, controla el bit E para una escritura correcta. No se puede realizar una lectura del LCD. Durante la escritura los 8 bits menos significativos corresponden al dato y el bit nueve corresponde al bit RS del LCD. Para los dispositivos se utiliza decodificación incompleta, minimizando el número de bits.
+
+Para hacer reset al MIPS se utilizan los botones EAST y WEST de la placa, primero se aprieta el botón EAST y luego el WEST. Apretar el primero activa el reset interno y apretar el segundo lo desactiva.
+
+El software, almacenado en el archivo programa.txt, al ser ejecutado muestra en el LCD "MICRO 2" alineado a la izquierda y en los LEDs se ve un conteo binario natural de 8 bits.
+
+--------------------------------------------
+Versión 1.1 
+Esta versión corrige un error en la Unidad de Control que afecta a la instrucción LW. Tambien corrige un error en la implementación de la instrucción ORI.
+
+Además permite utilizar directamente los programas generados por el MARS sin necesidad de ninguna modificación. Para esto se cambió la dirección inicial del PC de 0x00000000 a 0x00400000 y se incluyó un decodificador de memoria para la memoria de datos.
+Esta implementación es capaz de ejecutar las siguientes instrucciones:
+add, addi, sub, and, or, ori, andi, slti, slt, lui, beq, bne, j, jal, jr, lw y sw.
+
+En esta nueva versión el programa a ser ejecutado se guarda en un archivo de texto (programa.txt) que debe contener una instrucción por cada línea en números hexadecimales. No debe quedar ninguna línea en blanco en ninguna parte del archivo (el programa MARS al exportar el programa deja una línea en blanco al final, esta debe ser removida). El archivo debe estar con los demás archivos VHDL del proyecto, pero no debe incluirse en el proyecto en el XILINX ISE. El programa que se encuentra en el archivo programa.txt prende un led de la placa por vez y hace un corrimiento a la izquierda, al llegar al bit más significativo vuelve a prender el bit 0.
+
+Para usar la descripción:
+1. Cree un nuevo proyecto
+2. Una ventana le pedirá que seleccione el chip de Xilinx, incluyendo la Familia y el modelo exacto del chip. Para utilizar el kit que dispone el LEF se tiene que seleccionar la familia "Spartan 3A y Spartan 3AN" y el dispositivo XC3S700AN.
+3. Incluya en el proyecto todos los archivos .vhd.
+4. FIN
+
+La memoria de instrucciones está cargada con un programa que cuenta en binario, el conteo se muestra en los leds de la placa. Se utiliza un retardo relativamente grande de modo que el cambio de los valores binarios en los leds sea visible.
+
+OBS.: 
+1. Además de los archivos .vhd existe un archivo mips.ucf que contiene la asignación de pines y las restricciones de tiempo para utilizar el reloj de 50 MHz de la placa. 
+2. En mi.vhd se debe poner el programa a ejecutarse.
+
+

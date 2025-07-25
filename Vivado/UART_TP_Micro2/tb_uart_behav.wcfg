@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_uart_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_uart" />
+            <top_module name="utilities" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="21.122801020 ms"></ZoomEndTime>
+      <Cursor1Time time="2.030120301 ms"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="164"></NameColumnWidth>
+      <ValueColumnWidth column_width="196"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="25" />
+   <wvobject fp_name="/tb_uart/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/finalValue" type="array">
+      <obj_property name="ElementShortName">finalValue[7:0]</obj_property>
+      <obj_property name="ObjectShortName">finalValue[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/tx_data_in" type="array">
+      <obj_property name="ElementShortName">tx_data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/tx" type="logic">
+      <obj_property name="ElementShortName">tx</obj_property>
+      <obj_property name="ObjectShortName">tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/rx" type="logic">
+      <obj_property name="ElementShortName">rx</obj_property>
+      <obj_property name="ObjectShortName">rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/rx_data_out" type="array">
+      <obj_property name="ElementShortName">rx_data_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/FLAGS" type="array">
+      <obj_property name="ElementShortName">FLAGS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">FLAGS[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/CLK_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/test_data" type="array">
+      <obj_property name="ElementShortName">test_data[0:15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">test_data[0:15][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/RX_Block/FIFO_RX/queue" type="array">
+      <obj_property name="ElementShortName">queue[0:7][7:0]</obj_property>
+      <obj_property name="ObjectShortName">queue[0:7][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/TickGen/output" type="logic">
+      <obj_property name="ElementShortName">output</obj_property>
+      <obj_property name="ObjectShortName">output</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/TickGen/counter" type="array">
+      <obj_property name="ElementShortName">counter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/RX_Block/data_out" type="array">
+      <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/TickGen/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/TickGen/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/TickGen/finalValue" type="array">
+      <obj_property name="ElementShortName">finalValue[7:0]</obj_property>
+      <obj_property name="ObjectShortName">finalValue[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/TickGen/enableUpdate" type="logic">
+      <obj_property name="ElementShortName">enableUpdate</obj_property>
+      <obj_property name="ObjectShortName">enableUpdate</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/TickGen/output" type="logic">
+      <obj_property name="ElementShortName">output</obj_property>
+      <obj_property name="ObjectShortName">output</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/TickGen/counter" type="array">
+      <obj_property name="ElementShortName">counter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/TickGen/next_counter" type="array">
+      <obj_property name="ElementShortName">next_counter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">next_counter[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/TickGen/regFinalValue" type="array">
+      <obj_property name="ElementShortName">regFinalValue[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regFinalValue[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/TickGen/m" type="other">
+      <obj_property name="ElementShortName">m</obj_property>
+      <obj_property name="ObjectShortName">m</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/TX_Block/UTX/cont_ticks" type="array">
+      <obj_property name="ElementShortName">cont_ticks[5:0]</obj_property>
+      <obj_property name="ObjectShortName">cont_ticks[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_uart/uut/TX_Block/UTX/state" type="other">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+</wave_config>

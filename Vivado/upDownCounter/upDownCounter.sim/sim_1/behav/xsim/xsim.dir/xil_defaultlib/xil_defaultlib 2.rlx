@@ -1,0 +1,10 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/upDownCounter/upDownCounter.srcs/sim_1/new/tb_ButtonCounter.vhd,1742522483,vhdl,,,,tb_buttoncounter,,,,,,,,
+C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/upDownCounter/upDownCounter.srcs/sim_1/new/tb_edgeDetector.vhd,1742523147,vhdl,,,,tb_edgedetector,,,,,,,,
+C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/upDownCounter/upDownCounter.srcs/sources_1/new/ButtonCounter.vhd,1742520244,vhdl,,,,buttoncounter,,,,,,,,
+C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/upDownCounter/upDownCounter.srcs/sources_1/new/edgeDetector.vhd,1742522925,vhdl,C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/upDownCounter/upDownCounter.srcs/sources_1/new/ButtonCounter.vhd,,,edgedetector,,,,,,,,
+C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/upDownCounter/upDownCounter.srcs/sources_1/new/frecDivisor.vhd,1742510810,vhdl,C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/upDownCounter/upDownCounter.srcs/sources_1/new/ButtonCounter.vhd,,,frecdivisor,,,,,,,,
+C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/upDownCounter/upDownCounter.srcs/sources_1/new/upDownCounter.vhd,1742513113,vhdl,C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/upDownCounter/upDownCounter.srcs/sources_1/new/ButtonCounter.vhd,,,updowncounter,,,,,,,,

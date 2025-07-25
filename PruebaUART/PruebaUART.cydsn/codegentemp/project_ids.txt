@@ -1,0 +1,7 @@
+C:\Users\Elias\OneDrive\Documentos\PSoC Creator\PruebaUART\PruebaUART.cydsn\PruebaUART.cyprj|f39ed747-ce16-486f-ac6c-9b9c6e770b33
+D:\PSoC\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|a8aac532-d6a1-4662-af0c-519e6bfbf774
+C:\Users\Elias\OneDrive\Documentos\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|7d570c59-3336-47d6-9af0-b0ddd8915b2d
+D:\PSoC\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|19e3cacb-0953-4c5e-aeac-a916276e8dbd
+D:\PSoC\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|97b5e417-04f6-4b88-b07b-cfda373098cd
+D:\PSoC\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|b358416d-a3c3-42a4-8db2-53137a704fab
+D:\PSoC\PSoC Creator\4.4\PSoC Creator\dev\psoc3\AnalogDevice\PSoC35AnalogDevice.cylib\PSoC35AnalogDevice.cyprj|4fe4e616-c8d8-4bda-bda8-4e63f52e6cb0

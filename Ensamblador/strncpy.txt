@@ -1,0 +1,47 @@
+# strncmp: Compara n caracteres de un vector str1 con un vector str2.
+# Prototipo en c
+# int strncmp(char *str1,char *str2,size_t n){
+#	char cmp = 0;
+#	char char1,char2;
+#	while(n--){
+#		char1 = *str1++;
+#		char2 = *str2++;
+#		cmp = char1 - char2;
+#		if(char1==0 ||char2 == 0 ||cmp!=0)
+#			break;
+#	}
+#	return cmp;
+#}
+# Parámetros:
+#	$a0(str1)  -> puntero a str1
+#	$a1(str2)  -> puntero a str2
+#	$a2(n)     -> cantidad de datos a copiar
+# Retorno:
+#	$v0(cmp)   -> diferencia entre el primer caracter de str1 que sea distinto a str2
+# Temporales:
+#	$t0(char1) -> caracter almacenado en str1
+#	$t1(char2) -> caracter almacenado en str2
+strncmp:
+	#char cmp = 0;
+	move $v0,$zero 
+#while(n--)
+strncmp_mientras: 
+	beqz $a2,strncmp_finmientras
+	addi $a2,$a2,-1
+	#char1 = *str1++;
+	lb  $t0, 0($a0)
+	addi $a0,$a0,1
+	#char2 = *str2++;
+	lb  $t1, 0($a1)
+	addi $a1,$a1,1
+	#cmp = char1 - char2;
+	sub $v0,$t0,$t1
+	#if(char1==0 ||char2 == 0 ||cmp!=0) break;
+	beqz $t0,strncmp_finmientras
+	beqz $t1,strncmp_finmientras
+	bnez $v0,strncmp_finmientras
+	
+	j strncmp_mientras
+strncmp_finmientras:
+	#return cmp;
+	jr    $ra      

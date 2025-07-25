@@ -1,0 +1,291 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat May 17 20:26:14 2025
+# Process ID         : 28832
+# Current directory  : C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.runs/synth_1
+# Command line       : vivado.exe -log UART_led.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_led.tcl
+# Log file           : C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.runs/synth_1/UART_led.vds
+# Journal file       : C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.runs/synth_1\vivado.jou
+# Running On         : Elias
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 33663 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 35811 MB
+# Available Virtual  : 12092 MB
+#-----------------------------------------------------------
+source UART_led.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/utils_1/imports/synth_1/UART_test_sender.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/utils_1/imports/synth_1/UART_test_sender.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top UART_led -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21548
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1085.887 ; gain = 469.410
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'UART_led' [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/UART_led.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'frecDivisor' [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/imports/new/frecDivisor.vhd:18]
+	Parameter m bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'frecDivisor' (0#1) [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/imports/new/frecDivisor.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'reciever_fifo' [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/Reciever_FIFO.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'Reciever' [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/Reciever.vhd:18]
+INFO: [Synth 8-226] default block is never used [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/Reciever.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'Reciever' (0#1) [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/Reciever.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'FIFO' [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/FIFO.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'FIFO' (0#1) [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/FIFO.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'reciever_fifo' (0#1) [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/Reciever_FIFO.vhd:20]
+INFO: [Synth 8-226] default block is never used [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/UART_led.vhd:104]
+INFO: [Synth 8-256] done synthesizing module 'UART_led' (0#1) [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/UART_led.vhd:15]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1194.145 ; gain = 577.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1194.145 ; gain = 577.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1194.145 ; gain = 577.668
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1194.145 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/constrs_1/imports/Vivado/ZYBO_Master.xdc]
+Finished Parsing XDC File [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/constrs_1/imports/Vivado/ZYBO_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/constrs_1/imports/Vivado/ZYBO_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/UART_led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/UART_led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1279.918 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1279.918 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1279.918 ; gain = 663.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1279.918 ; gain = 663.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1279.918 ; gain = 663.441
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'std_reg' in module 'Reciever'
+INFO: [Synth 8-802] inferred FSM for state register 'state_LD_reg' in module 'UART_led'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'UART_led'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   start |                               01 |                               01
+                    read |                               10 |                               10
+                    stop |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'std_reg' using encoding 'sequential' in module 'Reciever'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               00
+                 waiting |                              010 |                               01
+                catching |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_LD_reg' using encoding 'one-hot' in module 'UART_led'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   reset |                             0001 |                               00
+            wait_1_cycle |                             0010 |                               01
+             enable_tick |                             0100 |                               10
+            disable_tick |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'UART_led'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1279.918 ; gain = 663.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 3     
++---Registers : 
+	                8 Bit    Registers := 11    
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input    8 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 11    
+	   4 Input    1 Bit        Muxes := 7     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1279.918 ; gain = 663.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1385.707 ; gain = 769.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1385.859 ; gain = 769.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1404.938 ; gain = 788.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1612.223 ; gain = 995.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1612.223 ; gain = 995.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1612.223 ; gain = 995.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1612.223 ; gain = 995.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1612.223 ; gain = 995.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1612.223 ; gain = 995.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT1  |     2|
+|3     |LUT2  |    16|
+|4     |LUT3  |    11|
+|5     |LUT4  |    20|
+|6     |LUT5  |    12|
+|7     |LUT6  |    22|
+|8     |MUXF7 |     4|
+|9     |FDRE  |    81|
+|10    |FDSE  |     3|
+|11    |IBUF  |     3|
+|12    |OBUF  |     4|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1612.223 ; gain = 995.746
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1612.223 ; gain = 909.973
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1612.223 ; gain = 995.746
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1621.312 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1624.988 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: a2bf4f35
+INFO: [Common 17-83] Releasing license: Synthesis
+39 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1624.988 ; gain = 1219.625
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1624.988 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Elias/OneDrive/UCA/9_Semestre/Micro_2/Vivado/UART_TP_Micro2/UART_TP_Micro2.runs/synth_1/UART_led.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file UART_led_utilization_synth.rpt -pb UART_led_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat May 17 20:26:49 2025...

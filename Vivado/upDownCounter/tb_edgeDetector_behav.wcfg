@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_edgeDetector_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_edgeDetector" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="965.881 ns"></ZoomEndTime>
+      <Cursor1Time time="55.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="340"></NameColumnWidth>
+      <ValueColumnWidth column_width="135"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/tb_edgeDetector/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_edgeDetector/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_edgeDetector/enable" type="logic">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_edgeDetector/input" type="logic">
+      <obj_property name="ElementShortName">input</obj_property>
+      <obj_property name="ObjectShortName">input</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_edgeDetector/output" type="logic">
+      <obj_property name="ElementShortName">output</obj_property>
+      <obj_property name="ObjectShortName">output</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_edgeDetector/DUT/std" type="other">
+      <obj_property name="ElementShortName">std</obj_property>
+      <obj_property name="ObjectShortName">std</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_edgeDetector/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+</wave_config>

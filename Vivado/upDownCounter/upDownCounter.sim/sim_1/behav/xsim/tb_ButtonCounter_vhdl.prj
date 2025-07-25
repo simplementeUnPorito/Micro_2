@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../upDownCounter.srcs/sources_1/new/frecDivisor.vhd" \
+"../../../../upDownCounter.srcs/sources_1/new/edgeDetector.vhd" \
+"../../../../upDownCounter.srcs/sources_1/new/upDownCounter.vhd" \
+"../../../../upDownCounter.srcs/sources_1/new/ButtonCounter.vhd" \
+"../../../../upDownCounter.srcs/sim_1/new/tb_ButtonCounter.vhd" \
+
+# Do not sort compile order
+nosort

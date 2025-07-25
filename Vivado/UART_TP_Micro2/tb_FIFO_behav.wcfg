@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_FIFO_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_FIFO" />
+            <top_module name="utilities" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="114.101 ns"></ZoomEndTime>
+      <Cursor1Time time="85.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="323"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/tb_FIFO/uut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIFO/uut/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIFO/uut/input" type="array">
+      <obj_property name="ElementShortName">input[7:0]</obj_property>
+      <obj_property name="ObjectShortName">input[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIFO/uut/output" type="array">
+      <obj_property name="ElementShortName">output[7:0]</obj_property>
+      <obj_property name="ObjectShortName">output[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIFO/uut/write" type="logic">
+      <obj_property name="ElementShortName">write</obj_property>
+      <obj_property name="ObjectShortName">write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIFO/uut/read" type="logic">
+      <obj_property name="ElementShortName">read</obj_property>
+      <obj_property name="ObjectShortName">read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIFO/uut/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIFO/uut/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIFO/uut/queue" type="array">
+      <obj_property name="ElementShortName">queue[0:7][7:0]</obj_property>
+      <obj_property name="ObjectShortName">queue[0:7][7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIFO/uut/s_empty" type="logic">
+      <obj_property name="ElementShortName">s_empty</obj_property>
+      <obj_property name="ObjectShortName">s_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIFO/uut/s_full" type="logic">
+      <obj_property name="ElementShortName">s_full</obj_property>
+      <obj_property name="ObjectShortName">s_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIFO/uut/head" type="other">
+      <obj_property name="ElementShortName">head</obj_property>
+      <obj_property name="ObjectShortName">head</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIFO/uut/tail" type="other">
+      <obj_property name="ElementShortName">tail</obj_property>
+      <obj_property name="ObjectShortName">tail</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FIFO/test_data" type="array">
+      <obj_property name="ElementShortName">test_data[0:7][7:0]</obj_property>
+      <obj_property name="ObjectShortName">test_data[0:7][7:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_mips_uart_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="general" />
+            <top_module name="glbl" />
+            <top_module name="tb_mips_uart" />
+            <top_module name="utilities" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="840.294841 us"></ZoomEndTime>
+      <Cursor1Time time="998.928000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="164"></NameColumnWidth>
+      <ValueColumnWidth column_width="151"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="25" />
+   <wvobject fp_name="/tb_mips_uart/clk_tb" type="logic">
+      <obj_property name="ElementShortName">clk_tb</obj_property>
+      <obj_property name="ObjectShortName">clk_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/inst_divisor/clk50mhz" type="logic">
+      <obj_property name="ElementShortName">clk50mhz</obj_property>
+      <obj_property name="ObjectShortName">clk50mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/reset_tb" type="logic">
+      <obj_property name="ElementShortName">reset_tb</obj_property>
+      <obj_property name="ObjectShortName">reset_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/botones_tb" type="array">
+      <obj_property name="ElementShortName">botones_tb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">botones_tb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/llaves_tb" type="array">
+      <obj_property name="ElementShortName">llaves_tb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">llaves_tb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/rx_tb" type="logic">
+      <obj_property name="ElementShortName">rx_tb</obj_property>
+      <obj_property name="ObjectShortName">rx_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/tx_tb" type="logic">
+      <obj_property name="ElementShortName">tx_tb</obj_property>
+      <obj_property name="ObjectShortName">tx_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/salida_tb" type="array">
+      <obj_property name="ElementShortName">salida_tb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">salida_tb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/atn_tb" type="logic">
+      <obj_property name="ElementShortName">atn_tb</obj_property>
+      <obj_property name="ObjectShortName">atn_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/RX_Block/URX/std" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">std</obj_property>
+      <obj_property name="ObjectShortName">std</obj_property>
+      <obj_property name="label">stadeRx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/TX_Block/FIFO_TX/queue" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">queue[0:7][7:0]</obj_property>
+      <obj_property name="ObjectShortName">queue[0:7][7:0]</obj_property>
+      <obj_property name="label">FifoTx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/RX_Block/FIFO_RX/queue" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">queue[0:7][7:0]</obj_property>
+      <obj_property name="ObjectShortName">queue[0:7][7:0]</obj_property>
+      <obj_property name="label">FifoRx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/TickGen/regFinalValue" type="array">
+      <obj_property name="ElementShortName">regFinalValue[5:0]</obj_property>
+      <obj_property name="ObjectShortName">regFinalValue[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/TX_Block/state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+      <obj_property name="label">stateTx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/RX_Block/state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+      <obj_property name="label">stateRx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/TickGen/counter" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">counter[5:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[5:0]</obj_property>
+      <obj_property name="label">divisorBps</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/TX_Block/UTX/cont_ticks" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">cont_ticks[6:0]</obj_property>
+      <obj_property name="ObjectShortName">cont_ticks[6:0]</obj_property>
+      <obj_property name="label">ticksTx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/RX_Block/URX/cont_ticks" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">cont_ticks[6:0]</obj_property>
+      <obj_property name="ObjectShortName">cont_ticks[6:0]</obj_property>
+      <obj_property name="label">TicksRx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/TX_Block/FIFO_TX/write" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">write</obj_property>
+      <obj_property name="ObjectShortName">write</obj_property>
+      <obj_property name="label">writeTxFifo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/TX_Block/FIFO_TX/read" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">read</obj_property>
+      <obj_property name="ObjectShortName">read</obj_property>
+      <obj_property name="label">readTxFifo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/RX_Block/FIFO_RX/write" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">write</obj_property>
+      <obj_property name="ObjectShortName">write</obj_property>
+      <obj_property name="label">writeRxFifo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/RX_Block/FIFO_RX/read" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">read</obj_property>
+      <obj_property name="ObjectShortName">read</obj_property>
+      <obj_property name="label">readRxFifo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_reg/reg" type="array">
+      <obj_property name="ElementShortName">reg[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg[0:31][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/en_tx_write" type="logic">
+      <obj_property name="ElementShortName">en_tx_write</obj_property>
+      <obj_property name="ObjectShortName">en_tx_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_uart/UUT/Inst_md_io/Inst_UART/en_rx_read" type="logic">
+      <obj_property name="ElementShortName">en_rx_read</obj_property>
+      <obj_property name="ObjectShortName">en_rx_read</obj_property>
+   </wvobject>
+</wave_config>

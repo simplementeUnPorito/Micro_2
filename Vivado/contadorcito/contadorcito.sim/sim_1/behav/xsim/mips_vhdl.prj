@@ -1,0 +1,36 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/JR_detect.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/alu.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/alu_control.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/alu_parcial.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/barrel_shifter.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/control1.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/control_branch.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/general.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/control_prog.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/decodificador.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/divisorCLK.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/entrada.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/exten_signo_cero.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/md.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/md_io.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/mi.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/mux32.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/mux32_4a1.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/mux5_4a1.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/pc.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/prog.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/reg.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/salida_par.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/shift_left.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/shift_left16.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/shift_left_j.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/suma_4.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/sumador32.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/uart_rx.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/uart_tx.vhd" \
+"../../../../contadorcito.srcs/sources_1/imports/MIPS-2023/mips.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_frecDivisor_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_frecDivisor" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="22.920001 us"></ZoomEndTime>
+      <Cursor1Time time="10.540000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="164"></NameColumnWidth>
+      <ValueColumnWidth column_width="226"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/tb_frecDivisor/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frecDivisor/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frecDivisor/finalValue" type="array">
+      <obj_property name="ElementShortName">finalValue[5:0]</obj_property>
+      <obj_property name="ObjectShortName">finalValue[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frecDivisor/enableUpdate" type="logic">
+      <obj_property name="ElementShortName">enableUpdate</obj_property>
+      <obj_property name="ObjectShortName">enableUpdate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frecDivisor/output" type="logic">
+      <obj_property name="ElementShortName">output</obj_property>
+      <obj_property name="ObjectShortName">output</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frecDivisor/m" type="other">
+      <obj_property name="ElementShortName">m</obj_property>
+      <obj_property name="ObjectShortName">m</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frecDivisor/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frecDivisor/total_cycles" type="other">
+      <obj_property name="ElementShortName">total_cycles</obj_property>
+      <obj_property name="ObjectShortName">total_cycles</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frecDivisor/sim_time" type="other">
+      <obj_property name="ElementShortName">sim_time</obj_property>
+      <obj_property name="ObjectShortName">sim_time</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frecDivisor/uut/counter" type="array">
+      <obj_property name="ElementShortName">counter[5:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

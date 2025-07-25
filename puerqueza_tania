@@ -1,0 +1,285 @@
+# Snake MIPS para MARS
+# Autor: Adaptado por ChatGPT para Erick
+
+.data
+WIDTH:      .word 20
+HEIGHT:     .word 20
+gameOver:   .word 0
+x:          .word 0
+y:          .word 0
+fruitX:     .word 0
+fruitY:     .word 0
+score:      .word 0
+nTail:      .word 0
+dir:        .word 0         # STOP = 0, LEFT = 1, RIGHT = 2, UP = 3, DOWN = 4
+tailX:      .space 400      # 100 words
+tailY:      .space 400
+
+text_score: .asciiz "Puntuacion: "
+text_input: .asciiz "Controles: w = arriba, s = abajo, a = izquierda, d = derecha, x = salir\n"
+text_end:   .asciiz "\nJuego terminado!\n"
+text_wall:  .asciiz "#"
+text_snake: .asciiz "O"
+text_fruit: .asciiz "F"
+text_empty: .asciiz " "
+text_nl:    .asciiz "\n"
+
+.text
+.globl main
+
+main:
+    jal Setup
+
+Loop:
+    lw $t0, gameOver
+    bne $t0, $zero, End
+
+    jal Draw
+    jal Input
+    jal Logic
+    j Loop
+
+End:
+    li $v0, 4
+    la $a0, text_end
+    syscall
+    li $v0, 10
+    syscall
+
+Setup:
+    li $t0, 0
+    sw $t0, gameOver
+    sw $t0, dir
+
+    li $t1, 20
+    div $t1, $t1, 2
+    sw $t1, x
+    sw $t1, y
+
+    lw $a1, WIDTH       # límite superior WIDTH
+    li $v0, 42          # rand()
+    syscall
+    remu $a0, $a0, $a1
+    sw $a0, fruitX
+
+    lw $a1, HEIGHT      # límite superior HEIGHT
+    li $v0, 42
+    syscall
+    remu $a0, $a0, $a1
+    sw $a0, fruitY
+
+    li $t0, 0
+    sw $t0, score
+    sw $t0, nTail
+    jr $ra
+
+Draw:
+    # Imprimir parte superior
+    li $t1, 0
+PrintTop:
+    li $v0, 4
+    la $a0, text_wall
+    syscall
+    addi $t1, $t1, 1
+    li $t2, 22
+    blt $t1, $t2, PrintTop
+    li $v0, 4
+    la $a0, text_nl
+    syscall
+
+    li $t3, 0          # i = 0 (fila)
+DrawRow:
+    li $t4, 0          # j = 0 (columna)
+    li $v0, 4
+    la $a0, text_wall
+    syscall
+DrawCol:
+    lw $t5, x
+    lw $t6, y
+    lw $t7, fruitX
+    lw $t8, fruitY
+
+    beq $t3, $t6, CheckColSnake
+    beq $t3, $t8, CheckColFruit
+    j PrintEmpty
+
+CheckColSnake:
+    beq $t4, $t5, PrintSnake
+    beq $t4, $t7, PrintFruit
+    j PrintEmpty
+
+CheckColFruit:
+    beq $t4, $t7, PrintFruit
+    j PrintEmpty
+
+PrintSnake:
+    li $v0, 4
+    la $a0, text_snake
+    syscall
+    j ContinueCol
+
+PrintFruit:
+    li $v0, 4
+    la $a0, text_fruit
+    syscall
+    j ContinueCol
+
+PrintEmpty:
+    li $v0, 4
+    la $a0, text_empty
+    syscall
+
+ContinueCol:
+    addi $t4, $t4, 1
+    li $t9, 20
+    blt $t4, $t9, DrawCol
+
+    li $v0, 4
+    la $a0, text_wall
+    syscall
+    li $v0, 4
+    la $a0, text_nl
+    syscall
+
+    addi $t3, $t3, 1
+    li $t9, 20
+    blt $t3, $t9, DrawRow
+
+    # Imprimir parte inferior
+    li $t1, 0
+PrintBottom:
+    li $v0, 4
+    la $a0, text_wall
+    syscall
+    addi $t1, $t1, 1
+    li $t2, 22
+    blt $t1, $t2, PrintBottom
+    li $v0, 4
+    la $a0, text_nl
+    syscall
+
+    # Mostrar puntuación e instrucciones
+    li $v0, 4
+    la $a0, text_score
+    syscall
+
+    li $v0, 1
+    lw $a0, score
+    syscall
+
+    li $v0, 4
+    la $a0, text_input
+    syscall
+
+    jr $ra
+
+Input:
+    li $v0, 12          # read character
+    syscall
+
+    li $t0, 'a'
+    beq $v0, $t0, SetLeft
+    li $t0, 'd'
+    beq $v0, $t0, SetRight
+    li $t0, 'w'
+    beq $v0, $t0, SetUp
+    li $t0, 's'
+    beq $v0, $t0, SetDown
+    li $t0, 'x'
+    beq $v0, $t0, ExitGame
+    jr $ra
+
+SetLeft:
+    li $t1, 1
+    sw $t1, dir
+    jr $ra
+
+SetRight:
+    li $t1, 2
+    sw $t1, dir
+    jr $ra
+
+SetUp:
+    li $t1, 3
+    sw $t1, dir
+    jr $ra
+
+SetDown:
+    li $t1, 4
+    sw $t1, dir
+    jr $ra
+
+ExitGame:
+    li $t1, 1
+    sw $t1, gameOver
+    jr $ra
+
+Logic:
+    lw $t0, dir
+    lw $t1, x
+    lw $t2, y
+
+    li $t3, 1
+    beq $t0, $t3, MoveLeft
+    li $t3, 2
+    beq $t0, $t3, MoveRight
+    li $t3, 3
+    beq $t0, $t3, MoveUp
+    li $t3, 4
+    beq $t0, $t3, MoveDown
+    j CheckFruit
+
+MoveLeft:
+    sub $t1, $t1, 1
+    j SavePos
+
+MoveRight:
+    add $t1, $t1, 1
+    j SavePos
+
+MoveUp:
+    sub $t2, $t2, 1
+    j SavePos
+
+MoveDown:
+    add $t2, $t2, 1
+    j SavePos
+
+SavePos:
+    sw $t1, x
+    sw $t2, y
+    j CheckFruit
+
+CheckFruit:
+    lw $t3, fruitX
+    lw $t4, fruitY
+    beq $t1, $t3, CheckFruitY
+    j EndLogic
+
+CheckFruitY:
+    beq $t2, $t4, EatFruit
+    j EndLogic
+
+EatFruit:
+    lw $t5, score
+    addi $t5, $t5, 10
+    sw $t5, score
+
+    lw $a1, WIDTH
+    li $v0, 42
+    syscall
+    remu $a0, $a0, $a1
+    sw $a0, fruitX
+
+    lw $a1, HEIGHT
+    li $v0, 42
+    syscall
+    remu $a0, $a0, $a1
+    sw $a0, fruitY
+
+    lw $t6, nTail
+    addi $t6, $t6, 1
+    sw $t6, nTail
+
+EndLogic:
+    jr $ra

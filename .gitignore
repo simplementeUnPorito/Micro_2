@@ -1,0 +1,38 @@
+# Ignorar archivos de sistema / temporales
+*.blend1
+*.zip
+*.log
+*.mp4
+*.mp3
+Thumbs.db
+desktop.ini
+*.pdf
+*.mkv
+*.exe
+*.dll
+*.wdb
+~$*
+
+# Ignorar archivos de PSoC Creator
+*.rpt
+*.cycdx
+*.cywrk
+*.cydsn/Generated_Source/
+*.cydsn/codegentemp/
+*.cydsn/backup/
+
+# Ignorar archivos de compilación y binarios
+*.exe
+*.out
+*.hex
+*.obj
+*.elf
+*.bin
+*.map
+*.bip
+
+
+# Ignorar carpetas comunes de backup
+__pycache__/
+*.bak
+*.tmp

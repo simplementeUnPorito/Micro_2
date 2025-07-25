@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_randomizador_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_randomizador" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,036.001 ns"></ZoomEndTime>
+      <Cursor1Time time="230.134 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="164"></NameColumnWidth>
+      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/tb_randomizador/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_randomizador/rand" type="logic">
+      <obj_property name="ElementShortName">rand</obj_property>
+      <obj_property name="ObjectShortName">rand</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_randomizador/chaos" type="logic">
+      <obj_property name="ElementShortName">chaos</obj_property>
+      <obj_property name="ObjectShortName">chaos</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_randomizador/read" type="logic">
+      <obj_property name="ElementShortName">read</obj_property>
+      <obj_property name="ObjectShortName">read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_randomizador/randomNumber" type="array">
+      <obj_property name="ElementShortName">randomNumber[5:0]</obj_property>
+      <obj_property name="ObjectShortName">randomNumber[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_randomizador/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_randomizador/CLK_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_randomizador/N" type="other">
+      <obj_property name="ElementShortName">N</obj_property>
+      <obj_property name="ObjectShortName">N</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_randomizador/BITS_OUT" type="other">
+      <obj_property name="ElementShortName">BITS_OUT</obj_property>
+      <obj_property name="ObjectShortName">BITS_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_randomizador/DUT/counter" type="array">
+      <obj_property name="ElementShortName">counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1744325052" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mips_tb.dcp">
+  <File Type="PA-TCL" Name="mips.tcl"/>
+  <File Type="REPORTS-TCL" Name="mips_reports.tcl"/>
+  <File Type="RDS-RDS" Name="mips.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="mips_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="mips_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="mips_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="mips.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="mips_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="mips_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/JR_detect.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/JR_detect.vhd"/>
+        <Attr Name="ImportTime" Val="1564144028"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/alu.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/alu.vhd"/>
+        <Attr Name="ImportTime" Val="1564143972"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/alu_control.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/alu_control.vhd"/>
+        <Attr Name="ImportTime" Val="1564144028"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/alu_parcial.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/alu_parcial.vhd"/>
+        <Attr Name="ImportTime" Val="1717026974"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/barrel_shifter.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/barrel_shifter.vhd"/>
+        <Attr Name="ImportTime" Val="1564143972"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/control1.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/control1.vhd"/>
+        <Attr Name="ImportTime" Val="1564085088"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/control_branch.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/control_branch.vhd"/>
+        <Attr Name="ImportTime" Val="1564143972"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/general.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/general.vhd"/>
+        <Attr Name="ImportTime" Val="1621368706"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/control_prog.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/control_prog.vhd"/>
+        <Attr Name="ImportTime" Val="1717023680"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/decodificador.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/decodificador.vhd"/>
+        <Attr Name="ImportTime" Val="1712079730"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/divisorCLK.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/divisorCLK.vhd"/>
+        <Attr Name="ImportTime" Val="1586561434"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/entrada.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/entrada.vhd"/>
+        <Attr Name="ImportTime" Val="1717003184"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/exten_signo_cero.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/exten_signo_cero.vhd"/>
+        <Attr Name="ImportTime" Val="1564143972"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/md.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/md.vhd"/>
+        <Attr Name="ImportTime" Val="1717027224"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/md_io.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/md_io.vhd"/>
+        <Attr Name="ImportTime" Val="1717023386"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/mi.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/mi.vhd"/>
+        <Attr Name="ImportTime" Val="1717527106"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/mux32.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/mux32.vhd"/>
+        <Attr Name="ImportTime" Val="1564143972"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/mux32_4a1.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/mux32_4a1.vhd"/>
+        <Attr Name="ImportTime" Val="1564143972"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/mux5_4a1.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/mux5_4a1.vhd"/>
+        <Attr Name="ImportTime" Val="1564143970"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/pc.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/pc.vhd"/>
+        <Attr Name="ImportTime" Val="1717510706"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/prog.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/prog.vhd"/>
+        <Attr Name="ImportTime" Val="1586045384"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/reg.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/reg.vhd"/>
+        <Attr Name="ImportTime" Val="1717157272"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/salida_par.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/salida_par.vhd"/>
+        <Attr Name="ImportTime" Val="1717023394"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/shift_left.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/shift_left.vhd"/>
+        <Attr Name="ImportTime" Val="1564144028"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/shift_left16.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/shift_left16.vhd"/>
+        <Attr Name="ImportTime" Val="1564143972"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/shift_left_j.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/shift_left_j.vhd"/>
+        <Attr Name="ImportTime" Val="1564144028"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/suma_4.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/suma_4.vhd"/>
+        <Attr Name="ImportTime" Val="1564143970"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/sumador32.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/sumador32.vhd"/>
+        <Attr Name="ImportTime" Val="1564144028"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/uart_rx.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/uart_rx.vhd"/>
+        <Attr Name="ImportTime" Val="1585591322"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/uart_tx.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/uart_tx.vhd"/>
+        <Attr Name="ImportTime" Val="1586031616"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/mips.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/mips.vhd"/>
+        <Attr Name="ImportTime" Val="1717593126"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/antirebote.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/antirebote.vhd"/>
+        <Attr Name="ImportTime" Val="1564143970"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/lcd.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/lcd.vhd"/>
+        <Attr Name="ImportTime" Val="1564143972"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/MIPS-2023/programa.txt">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/programa.txt"/>
+        <Attr Name="ImportTime" Val="1717595038"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="mips"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/MIPS-2023/ZYBO_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../MIPS-2023/ZYBO_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1717593372"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/mips_tb.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

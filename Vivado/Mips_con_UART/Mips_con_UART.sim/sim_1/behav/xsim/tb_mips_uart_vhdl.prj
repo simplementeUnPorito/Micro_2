@@ -1,0 +1,44 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/utilities.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/FIFO.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/JR_detect.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/Reciever.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/Reciever_FIFO.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/Transmitter.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/Transmitter_FIFO.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/new/frecDivisor.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/UART_TP_Micro2/UART_TP_Micro2.srcs/sources_1/new/UART.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/alu.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/alu_control.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/alu_parcial.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/barrel_shifter.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/control1.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/control_branch.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/general.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/control_prog.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/decodificador.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/entrada.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/exten_signo_cero.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/md.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/md_io.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/mi.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/mips.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/mux32.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/mux32_4a1.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/mux5_4a1.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/pc.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/prog.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/reg.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/salida_par.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/shift_left.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/shift_left16.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/shift_left_j.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/suma_4.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/sumador32.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/uart_rx.vhd" \
+"../../../../Mips_con_UART.srcs/sources_1/imports/Vivado/MIPS-2023/uart_tx.vhd" \
+"../../../../Mips_con_UART.srcs/sim_1/new/mips_tb.vhd" \
+
+# Do not sort compile order
+nosort
